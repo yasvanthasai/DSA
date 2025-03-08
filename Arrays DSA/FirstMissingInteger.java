@@ -3,7 +3,9 @@ Note: Your algorithm should run in O(n) time and use constant space.*/
 
 
 //this technique we can also use for... number of swaps required to make the number equal to the index in the array.
-public class Solution {
+
+import java.util.ArrayList;
+public class FirstMissingInteger {
     public static void swap(ArrayList<Integer> A, int i, int j) {
         int temp = A.get(i);
         A.set(i, A.get(j));
