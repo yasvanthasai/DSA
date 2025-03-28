@@ -24,3 +24,16 @@ public class MaximumANDPair {
     }
     
 }
+
+public class MaximumANDPairBruteForce {
+    public int solve(ArrayList<Integer> A) {
+        int ans = 0;
+        for (int i = 0; i < A.size(); i++) {
+            for (int j = i + 1; j < A.size(); j++) {
+                int andValue = A.get(i) & A.get(j);
+                ans = Math.max(ans, andValue);
+            }
+        }
+        return ans;
+    }
+}
