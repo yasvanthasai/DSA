@@ -15,7 +15,6 @@ public class PairSumDivisibleByM {
         for(int i =0;i<n;i++){
             int m = ((a[i] % b) + b) % b;
             e[m]++;
-
         }
         long ans = 0;
         ans+=((long)e[0]*(e[0]-1))/2;
@@ -27,14 +26,8 @@ public class PairSumDivisibleByM {
             }else{
                 ans+=((long)e[i]*e[b-i]);
                 ans %= MOD;
-
-            }
-
-            
+            } 
         }
-
         return (int)ans;
-
-    }
-    
+    } 
 }

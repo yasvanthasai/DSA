@@ -20,8 +20,6 @@ public class DeleteOne {
         for(int j = n-2;j>=0;j--){
             suffix[j] = gcd(suffix[j+1],a[j]);
         }
-
-        //prefix[i-1],suffix[i+1];
         int ans = 0;
         for(int k =0;k<n;k++){
             if(k==0){
@@ -30,14 +28,8 @@ public class DeleteOne {
                 ans = Math.max(ans, prefix[k-1]);
             }else{
                 ans = Math.max(ans,gcd(prefix[k-1],suffix[k+1]));
-
-            }
-            
+            } 
         }
-
         return ans;
-
-
     }
-    
 }
