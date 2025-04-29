@@ -2,9 +2,10 @@
 NOTE: The order of the resultant array should be the same as the input array.*/
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CountOfDivisors {
-    public int spf(int a){
+    public static int spf(int a){
         if (a < 2) return a;
         for(int i =2;i*i<=a;i++){
             if((a%i)==0){
@@ -13,7 +14,7 @@ public class CountOfDivisors {
         }
         return a;
     }
-    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+    public static ArrayList<Integer> solve(ArrayList<Integer> A) {
         ArrayList<Integer> ans = new ArrayList<>();
         for(int i =0;i<A.size();i++){
             int num = A.get(i);
@@ -32,4 +33,14 @@ public class CountOfDivisors {
         return ans;
     }
 
+    public static void main(String[] args) {
+        ArrayList<Integer> n = new ArrayList<>(Arrays.asList(2, 3, 5, 10));
+        ArrayList<Integer> ans = solve(n);
+        
+        System.out.println("Smallest Prime Factor for each number:");
+        for (int i = 0; i <ans.size(); i++) {
+            System.out.println(n.get(i) + "-" + ans.get(i));
+        }
+
+    }
 }
