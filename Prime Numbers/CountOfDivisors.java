@@ -37,7 +37,7 @@ public class CountOfDivisors {
         ArrayList<Integer> n = new ArrayList<>(Arrays.asList(2, 3, 5, 10));
         ArrayList<Integer> ans = solve(n);
         
-        System.out.println("Smallest Prime Factor for each number:");
+        System.out.println("Count of factors for each number:");
         for (int i = 0; i <ans.size(); i++) {
             System.out.println(n.get(i) + "-" + ans.get(i));
         }
